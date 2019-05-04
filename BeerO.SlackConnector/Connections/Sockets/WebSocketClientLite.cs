@@ -12,43 +12,15 @@ namespace BeerO.SlackConnector.Connections.Sockets
     internal class WebSocketClientLite : IWebSocketClient
     {
         private readonly IMessageInterpreter _interpreter;
-
-        //private readonly List<IDisposable> _subscriptions = new List<IDisposable>();
+        private readonly List<IDisposable> _subscriptions = new List<IDisposable>();
         private IMessageWebSocketRx _webSocket;
-        private int                 _currentMessageId;
-        private static ConnectionStatus    CurrentConnectionStatus;
-        public bool IsAlive => CurrentConnectionStatus == ConnectionStatus.WebsocketConnected;
+        private int _currentMessageId;
 
+        public bool IsAlive => this._webSocket.IsConnected;
 
         public WebSocketClientLite(IMessageInterpreter interpreter)
         {
             this._interpreter = interpreter;
-        }
-
-        private static Action SubscibeToCurrentStatusCompleted()
-        {
-            return () =>
-            {
-                Console
-                    .WriteLine($"Connection status completed.");
-            };
-        }
-
-        private static Action<Exception> SubscibeToCurrentStatusException()
-        {
-            return ex =>
-            {
-                Console
-                    .WriteLine($"Connection status error: {ex}.");
-            };
-        }
-
-        private static Action<ConnectionStatus> SubscibeToCurrentStatusChange()
-        {
-            return s =>
-            {
-                CurrentConnectionStatus = s;
-            };
         }
 
         public async Task Connect(string webSockerUrl)
@@ -59,12 +31,10 @@ namespace BeerO.SlackConnector.Connections.Sockets
             }
 
             this._webSocket = new MessageWebSocketRx();
-
-            this._webSocket.ConnectionStatusObservable.Subscribe(this.OnConnectionChange);
+            this._subscriptions.Add(this._webSocket.ObserveConnectionStatus.Subscribe(OnConnectionChange));
 
             var uri = new Uri(webSockerUrl);
-            var messageObserver =
-                await this._webSocket.CreateObservableMessageReceiver(uri, excludeZeroApplicationDataInPong: true);
+            var messageObserver = await this._webSocket.CreateObservableMessageReceiver(uri, excludeZeroApplicationDataInPong: true);
             this._subscriptions.Add(messageObserver.Subscribe(OnWebSocketOnMessage));
         }
 
@@ -85,15 +55,13 @@ namespace BeerO.SlackConnector.Connections.Sockets
                 {
                     subscription.Dispose();
                 }
-
                 this._subscriptions.Clear();
 
-                await this._webSocket.DisconnectAsync();
+                await this._webSocket.CloseAsync();
             }
         }
 
         public event EventHandler<InboundMessage> OnMessage;
-
         private void OnWebSocketOnMessage(string message)
         {
             string messageJson = message ?? "";
@@ -102,7 +70,6 @@ namespace BeerO.SlackConnector.Connections.Sockets
         }
 
         public event EventHandler OnClose;
-
         private void OnConnectionChange(ConnectionStatus connectionStatus)
         {
             switch (connectionStatus)
