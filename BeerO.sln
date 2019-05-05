@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeerO.Bot", "BeerO.Bot\BeerO.Bot.csproj", "{80A7979F-A94D-4FA7-9F6A-A025B8DA2E39}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BeerO.Bot", "BeerO.Bot\BeerO.Bot.csproj", "{80A7979F-A94D-4FA7-9F6A-A025B8DA2E39}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Slack", "Slack", "{CCD771BB-B286-42A6-909B-55683776DBEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeerO.SlackConnector", "BeerO.SlackConnector\BeerO.SlackConnector.csproj", "{0723AFCB-C072-441E-BA36-84314A139500}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BeerO.SlackConnector", "BeerO.SlackConnector\BeerO.SlackConnector.csproj", "{0723AFCB-C072-441E-BA36-84314A139500}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeerO.SlackBotCore", "BeerO.SlackBotCore\BeerO.SlackBotCore.csproj", "{D3A06601-5357-4FF3-9947-774DC4AF5055}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,12 +25,17 @@ Global
 		{0723AFCB-C072-441E-BA36-84314A139500}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0723AFCB-C072-441E-BA36-84314A139500}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0723AFCB-C072-441E-BA36-84314A139500}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3A06601-5357-4FF3-9947-774DC4AF5055}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3A06601-5357-4FF3-9947-774DC4AF5055}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3A06601-5357-4FF3-9947-774DC4AF5055}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3A06601-5357-4FF3-9947-774DC4AF5055}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{0723AFCB-C072-441E-BA36-84314A139500} = {CCD771BB-B286-42A6-909B-55683776DBEB}
+		{D3A06601-5357-4FF3-9947-774DC4AF5055} = {CCD771BB-B286-42A6-909B-55683776DBEB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E590BEB3-D701-4A04-945B-7F61095C5509}
