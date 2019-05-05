@@ -6,7 +6,7 @@ namespace BeerO.SlackConnector.Connections.Sockets.Messages.Inbound
     {
         public GroupJoinedMessage()
         {
-            this.MessageType = MessageType.Group_Joined;
+            this.MessageType = MessageType.GroupJoined;
         }
 
         public Group Channel { get; set; }

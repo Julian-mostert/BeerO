@@ -140,7 +140,7 @@ namespace BeerO.SlackBotCore
                 Username = this.GetUsername(message),
                 UserEmail = message.User.Email,
                 Channel = message.ChatHub.Id,
-                ChannelType = message.ChatHub.Type == SlackChatHubType.DM ? ResponseType.DirectMessage : ResponseType.Channel,
+                ChannelType = message.ChatHub.Type == SlackChatHubType.Dm ? ResponseType.DirectMessage : ResponseType.Channel,
                 UserChannel = await this.GetUserChannel(message),
                 BotName = this._connection.Self.Name,
                 BotId = this._connection.Self.Id,

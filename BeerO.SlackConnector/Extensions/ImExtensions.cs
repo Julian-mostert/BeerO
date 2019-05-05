@@ -13,7 +13,7 @@ namespace BeerO.SlackConnector.Extensions
             {
                 Id = im.Id,
                 Name = "@" + (user == null ? im.User : user.Name),
-                Type = SlackChatHubType.DM
+                Type = SlackChatHubType.Dm
             };
         }
     }

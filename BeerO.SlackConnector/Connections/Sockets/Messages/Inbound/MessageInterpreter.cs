@@ -28,25 +28,25 @@ namespace BeerO.SlackConnector.Connections.Sockets.Messages.Inbound
                     case MessageType.Message:
                         message = GetChatMessage(json);
                         break;
-                    case MessageType.Group_Joined:
+                    case MessageType.GroupJoined:
                         message = JsonConvert.DeserializeObject<GroupJoinedMessage>(json);
                         break;
-                    case MessageType.Channel_Joined:
+                    case MessageType.ChannelJoined:
                         message = JsonConvert.DeserializeObject<ChannelJoinedMessage>(json);
                         break;
-                    case MessageType.Team_Join:
+                    case MessageType.TeamJoin:
                         message = JsonConvert.DeserializeObject<UserJoinedMessage>(json);
                         break;
-                    case MessageType.Im_Created:
+                    case MessageType.ImCreated:
                         message = JsonConvert.DeserializeObject<DmChannelJoinedMessage>(json);
                         break;
                     case MessageType.Pong:
                         message = JsonConvert.DeserializeObject<PongMessage>(json);
                         break;
-                    case MessageType.Reaction_Added:
+                    case MessageType.ReactionAdded:
                         message = GetReactionMessage(json);
                         break;
-                    case MessageType.Channel_Created:
+                    case MessageType.ChannelCreated:
                         message = JsonConvert.DeserializeObject<ChannelCreatedMessage>(json);
                         break;
                 }
@@ -97,13 +97,13 @@ namespace BeerO.SlackConnector.Connections.Sockets.Messages.Inbound
             var reactionItemType = ParseReactionItemType(json);
             switch (reactionItemType)
             {
-                case ReactionItemType.file:
+                case ReactionItemType.File:
                     message.ReactingTo = GenerateReactionItem<FileReaction>(json);
                     break;
-                case ReactionItemType.file_comment:
+                case ReactionItemType.FileComment:
                     message.ReactingTo = GenerateReactionItem<FileCommentReaction>(json);
                     break;
-                case ReactionItemType.message:
+                case ReactionItemType.Message:
                     message.ReactingTo = GenerateReactionItem<MessageReaction>(json);
                     break;
                 default:
@@ -122,7 +122,7 @@ namespace BeerO.SlackConnector.Connections.Sockets.Messages.Inbound
 
         private static ReactionItemType ParseReactionItemType(string json)
         {
-            var messageType = ReactionItemType.unknown;
+            var messageType = ReactionItemType.Unknown;
             if (!string.IsNullOrWhiteSpace(json))
             {
                 var messageJobject = JObject.Parse(json);

@@ -12,7 +12,7 @@ namespace BeerO.SlackConnector.Connections.Clients.Chat
     internal class FlurlChatClient : IChatClient
     {
         private readonly IResponseVerifier _responseVerifier;
-        internal const string SEND_MESSAGE_PATH = "/api/chat.postMessage";
+        internal const string SendMessagePath = "/api/chat.postMessage";
 
         public FlurlChatClient(IResponseVerifier responseVerifier)
         {
@@ -23,7 +23,7 @@ namespace BeerO.SlackConnector.Connections.Clients.Chat
         {
             var request = ClientConstants
                        .SlackApiHost
-                       .AppendPathSegment(SEND_MESSAGE_PATH)
+                       .AppendPathSegment(SendMessagePath)
                        .SetQueryParam("token", slackKey)
                        .SetQueryParam("channel", channel)
                        .SetQueryParam("text", text)

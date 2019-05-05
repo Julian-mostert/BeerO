@@ -9,15 +9,15 @@ namespace BeerO.SlackConnector.Connections.Clients.Channel
     internal class FlurlChannelClient : IChannelClient
     {
         private readonly IResponseVerifier _responseVerifier;
-        internal const string JOIN_DM_PATH = "/api/im.open";
-        internal const string CHANNEL_CREATE_PATH = "/api/channels.create";
-        internal const string CHANNEL_JOIN_PATH = "/api/channels.join";
-        internal const string CHANNEL_ARCHIVE_PATH = "/api/channels.archive";
-        internal const string CHANNEL_SET_PURPOSE_PATH = "/api/channels.setPurpose";
-        internal const string CHANNEL_SET_TOPIC_PATH = "/api/channels.setTopic";
-        internal const string CHANNELS_LIST_PATH = "/api/channels.list";
-        internal const string GROUPS_LIST_PATH = "/api/groups.list";
-        internal const string USERS_LIST_PATH = "/api/users.list";
+        internal const string JoinDmPath = "/api/im.open";
+        internal const string ChannelCreatePath = "/api/channels.create";
+        internal const string ChannelJoinPath = "/api/channels.join";
+        internal const string ChannelArchivePath = "/api/channels.archive";
+        internal const string ChannelSetPurposePath = "/api/channels.setPurpose";
+        internal const string ChannelSetTopicPath = "/api/channels.setTopic";
+        internal const string ChannelsListPath = "/api/channels.list";
+        internal const string GroupsListPath = "/api/groups.list";
+        internal const string UsersListPath = "/api/users.list";
         
         public FlurlChannelClient(IResponseVerifier responseVerifier)
         {
@@ -28,7 +28,7 @@ namespace BeerO.SlackConnector.Connections.Clients.Channel
         {
             var response = await ClientConstants
                        .SlackApiHost
-                       .AppendPathSegment(JOIN_DM_PATH)
+                       .AppendPathSegment(JoinDmPath)
                        .SetQueryParam("token", slackKey)
                        .SetQueryParam("user", user)
                        .GetJsonAsync<JoinChannelResponse>();
@@ -41,7 +41,7 @@ namespace BeerO.SlackConnector.Connections.Clients.Channel
         {
             var response = await ClientConstants
                 .SlackApiHost
-                .AppendPathSegment(CHANNEL_CREATE_PATH)
+                .AppendPathSegment(ChannelCreatePath)
                 .SetQueryParam("token", slackKey)
                 .SetQueryParam("name", channelName)
                 .GetJsonAsync<ChannelResponse>();
@@ -54,7 +54,7 @@ namespace BeerO.SlackConnector.Connections.Clients.Channel
         {
             var response = await ClientConstants
                 .SlackApiHost
-                .AppendPathSegment(CHANNEL_JOIN_PATH)
+                .AppendPathSegment(ChannelJoinPath)
                 .SetQueryParam("token", slackKey)
                 .SetQueryParam("name", channelName)
                 .GetJsonAsync<ChannelResponse>();
@@ -67,7 +67,7 @@ namespace BeerO.SlackConnector.Connections.Clients.Channel
         {
             var response = await ClientConstants
                 .SlackApiHost
-                .AppendPathSegment(CHANNEL_ARCHIVE_PATH)
+                .AppendPathSegment(ChannelArchivePath)
                 .SetQueryParam("token", slackKey)
                 .SetQueryParam("channel", channelName)
                 .GetJsonAsync<StandardResponse>();
@@ -79,7 +79,7 @@ namespace BeerO.SlackConnector.Connections.Clients.Channel
         {
             var response = await ClientConstants
                 .SlackApiHost
-                .AppendPathSegment(CHANNEL_SET_PURPOSE_PATH)
+                .AppendPathSegment(ChannelSetPurposePath)
                 .SetQueryParam("token", slackKey)
                 .SetQueryParam("channel", channelName)
                 .SetQueryParam("purpose", purpose)
@@ -93,7 +93,7 @@ namespace BeerO.SlackConnector.Connections.Clients.Channel
         {
             var response = await ClientConstants
                 .SlackApiHost
-                .AppendPathSegment(CHANNEL_SET_TOPIC_PATH)
+                .AppendPathSegment(ChannelSetTopicPath)
                 .SetQueryParam("token", slackKey)
                 .SetQueryParam("channel", channelName)
                 .SetQueryParam("topic", topic)
@@ -107,7 +107,7 @@ namespace BeerO.SlackConnector.Connections.Clients.Channel
         {
             var response = await ClientConstants
                        .SlackApiHost
-                       .AppendPathSegment(CHANNELS_LIST_PATH)
+                       .AppendPathSegment(ChannelsListPath)
                        .SetQueryParam("token", slackKey)
                        .GetJsonAsync<ChannelsResponse>();
 
@@ -119,7 +119,7 @@ namespace BeerO.SlackConnector.Connections.Clients.Channel
         {
             var response = await ClientConstants
                        .SlackApiHost
-                       .AppendPathSegment(GROUPS_LIST_PATH)
+                       .AppendPathSegment(GroupsListPath)
                        .SetQueryParam("token", slackKey)
                        .GetJsonAsync<GroupsResponse>();
 
@@ -131,7 +131,7 @@ namespace BeerO.SlackConnector.Connections.Clients.Channel
         {
             var response = await ClientConstants
                        .SlackApiHost
-                       .AppendPathSegment(USERS_LIST_PATH)
+                       .AppendPathSegment(UsersListPath)
                        .SetQueryParam("token", slackKey)
                        .SetQueryParam("presence", "1")
                        .GetJsonAsync<UsersResponse>();

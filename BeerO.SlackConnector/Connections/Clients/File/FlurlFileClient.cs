@@ -10,8 +10,8 @@ namespace BeerO.SlackConnector.Connections.Clients.File
     internal class FlurlFileClient : IFileClient
     {
         private readonly IResponseVerifier _responseVerifier;
-        internal const string FILE_UPLOAD_PATH = "/api/files.upload";
-        internal const string POST_FILE_VARIABLE_NAME = "file";
+        internal const string FileUploadPath = "/api/files.upload";
+        internal const string PostFileVariableName = "file";
 
         public FlurlFileClient(IResponseVerifier responseVerifier)
         {
@@ -22,10 +22,10 @@ namespace BeerO.SlackConnector.Connections.Clients.File
         {
             var httpResponse = await ClientConstants
                        .SlackApiHost
-                       .AppendPathSegment(FILE_UPLOAD_PATH)
+                       .AppendPathSegment(FileUploadPath)
                        .SetQueryParam("token", slackKey)
                        .SetQueryParam("channels", channel)
-                       .PostMultipartAsync(content => content.AddFile(POST_FILE_VARIABLE_NAME, filePath));
+                       .PostMultipartAsync(content => content.AddFile(PostFileVariableName, filePath));
 
             var responseContent = await httpResponse.Content.ReadAsStringAsync();
             var response = JsonConvert.DeserializeObject<StandardResponse>(responseContent);
@@ -36,10 +36,10 @@ namespace BeerO.SlackConnector.Connections.Clients.File
         {
             var httpResponse = await ClientConstants
                        .SlackApiHost
-                       .AppendPathSegment(FILE_UPLOAD_PATH)
+                       .AppendPathSegment(FileUploadPath)
                        .SetQueryParam("token", slackKey)
                        .SetQueryParam("channels", channel)
-                       .PostMultipartAsync(content => content.AddFile(POST_FILE_VARIABLE_NAME, stream, fileName));
+                       .PostMultipartAsync(content => content.AddFile(PostFileVariableName, stream, fileName));
 
             var responseContent = await httpResponse.Content.ReadAsStringAsync();
             var response = JsonConvert.DeserializeObject<StandardResponse>(responseContent);

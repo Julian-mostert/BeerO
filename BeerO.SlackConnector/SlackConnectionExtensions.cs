@@ -10,14 +10,14 @@ namespace BeerO.SlackConnector
         /// <summary>
         /// Will try and find a direct messag the bot is connected to with that user name, e.g. simon
         /// </summary>
-        public static SlackChatHub ConnectedDM(this ISlackConnection slackConnection, string userName)
+        public static SlackChatHub ConnectedDm(this ISlackConnection slackConnection, string userName)
         {
             return slackConnection.ConnectedDMs().FirstOrDefault(x => x.Name.Equals(userName, StringComparison.OrdinalIgnoreCase));
         }
 
         public static IEnumerable<SlackChatHub> ConnectedDMs(this ISlackConnection slackConnection)
         {
-            return slackConnection.ConnectedHubs.Values.Where(hub => hub.Type == SlackChatHubType.DM);
+            return slackConnection.ConnectedHubs.Values.Where(hub => hub.Type == SlackChatHubType.Dm);
         }
 
         /// <summary>

@@ -6,7 +6,7 @@ namespace BeerO.SlackConnector.Connections.Sockets.Messages.Inbound
     {
         public DmChannelJoinedMessage()
         {
-            this.MessageType = MessageType.Im_Created;
+            this.MessageType = MessageType.ImCreated;
         }
 
         public Im Channel { get; set; }

@@ -7,7 +7,7 @@ namespace BeerO.SlackConnector.Connections.Sockets.Messages.Inbound
     {
         public ReactionMessage()
         {
-            this.MessageType = MessageType.Reaction_Added;
+            this.MessageType = MessageType.ReactionAdded;
         }
         
         [JsonProperty("user")]

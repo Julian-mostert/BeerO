@@ -8,7 +8,7 @@ namespace BeerO.SlackConnector.Connections.Clients.Handshake
     internal class FlurlHandshakeClient : IHandshakeClient
     {
         private readonly IResponseVerifier _responseVerifier;
-        internal const string HANDSHAKE_PATH = "/api/rtm.start";
+        internal const string HandshakePath = "/api/rtm.start";
 
         public FlurlHandshakeClient(IResponseVerifier responseVerifier)
         {
@@ -19,7 +19,7 @@ namespace BeerO.SlackConnector.Connections.Clients.Handshake
         {
             var response = await ClientConstants
                        .SlackApiHost
-                       .AppendPathSegment(HANDSHAKE_PATH)
+                       .AppendPathSegment(HandshakePath)
                        .SetQueryParam("token", slackKey)
                        .GetJsonAsync<HandshakeResponse>();
 

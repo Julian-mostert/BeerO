@@ -6,7 +6,7 @@ namespace BeerO.SlackConnector.Connections.Sockets.Messages.Inbound
     {
         public UserJoinedMessage()
         {
-            this.MessageType = MessageType.Team_Join;
+            this.MessageType = MessageType.TeamJoin;
         }
 
         public User User { get; set; }

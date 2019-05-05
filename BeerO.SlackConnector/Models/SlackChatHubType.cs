@@ -2,7 +2,7 @@
 {
     public enum SlackChatHubType
     {
-        DM,
+        Dm,
         Channel,
         Group
     }

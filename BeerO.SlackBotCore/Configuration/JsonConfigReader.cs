@@ -13,7 +13,7 @@ namespace BeerO.SlackBotCore.Configuration
         private JObject _currentJObject;
         private readonly object _lock = new object();
         private readonly string _absoluteFileName;
-        private const string SLACKAPI_CONFIGVALUE = "slack:apiToken";
+        private const string SlackapiConfigvalue = "slack:apiToken";
 
         private JsonConfigReader(string absoluteFileName)
         {
@@ -24,7 +24,7 @@ namespace BeerO.SlackBotCore.Configuration
         public bool StatsEnabled { get; set; } = true;
         public bool AboutEnabled { get; set; } = true;
 
-        public string SlackApiKey => this.GetConfigEntry<string>(SLACKAPI_CONFIGVALUE);
+        public string SlackApiKey => this.GetConfigEntry<string>(SlackapiConfigvalue);
 
         public T GetConfigEntry<T>(string entryName)
         {

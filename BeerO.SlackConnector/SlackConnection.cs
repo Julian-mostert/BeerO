@@ -94,13 +94,13 @@ namespace BeerO.SlackConnector
             switch (inboundMessage.MessageType)
             {
                 case MessageType.Message: return this.HandleMessage((ChatMessage)inboundMessage);
-                case MessageType.Group_Joined: return this.HandleGroupJoined((GroupJoinedMessage)inboundMessage);
-                case MessageType.Channel_Joined: return this.HandleChannelJoined((ChannelJoinedMessage)inboundMessage);
-                case MessageType.Im_Created: return this.HandleDmJoined((DmChannelJoinedMessage)inboundMessage);
-                case MessageType.Team_Join: return this.HandleUserJoined((UserJoinedMessage)inboundMessage);
+                case MessageType.GroupJoined: return this.HandleGroupJoined((GroupJoinedMessage)inboundMessage);
+                case MessageType.ChannelJoined: return this.HandleChannelJoined((ChannelJoinedMessage)inboundMessage);
+                case MessageType.ImCreated: return this.HandleDmJoined((DmChannelJoinedMessage)inboundMessage);
+                case MessageType.TeamJoin: return this.HandleUserJoined((UserJoinedMessage)inboundMessage);
                 case MessageType.Pong: return this.HandlePong((PongMessage)inboundMessage);
-                case MessageType.Reaction_Added: return this.HandleReaction((ReactionMessage)inboundMessage);
-                case MessageType.Channel_Created: return this.HandleChannelCreated((ChannelCreatedMessage)inboundMessage);
+                case MessageType.ReactionAdded: return this.HandleReaction((ReactionMessage)inboundMessage);
+                case MessageType.ChannelCreated: return this.HandleChannelCreated((ChannelCreatedMessage)inboundMessage);
             }
 
             return Task.CompletedTask;
@@ -345,7 +345,7 @@ namespace BeerO.SlackConnector
             {
                 Id = channel.Id,
                 Name = channel.Name,
-                Type = SlackChatHubType.DM
+                Type = SlackChatHubType.Dm
             };
         }
 

@@ -16,7 +16,7 @@ namespace BeerO.SlackConnector.BotHelpers
                         hubType = SlackChatHubType.Channel;
                         break;
                     case 'D':
-                        hubType = SlackChatHubType.DM;
+                        hubType = SlackChatHubType.Dm;
                         break;
                     case 'G':
                         hubType = SlackChatHubType.Group;
