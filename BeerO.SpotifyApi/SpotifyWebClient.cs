@@ -16,7 +16,7 @@ namespace BeerO.SpotifyApi
         private readonly Encoding _encoding = Encoding.UTF8;
         private readonly HttpClient _client;
 
-        private const string UnknownErrorJson = "{\"error\": { \"status\": 0, \"message\": \"SpotifyAPI.Web - Unkown Spotify Error\" }}";
+        private const string UnknownErrorJson = "{\"error\": { \"status\": 0, \"message\": \"BeerO.SpotifyApi - Unkown Spotify Error\" }}";
 
         public SpotifyWebClient(ProxyConfig proxyConfig = null)
         {
