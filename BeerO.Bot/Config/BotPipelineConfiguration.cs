@@ -1,8 +1,8 @@
 ﻿using BeerOBot.ConsoleApp.SlackMiddleWare;
 using BeerOBot.ConsoleApp.SlackPlugin;
 using Noobot.Core.Configuration;
-using Noobot.Toolbox.Middleware;
-using Noobot.Toolbox.Plugins;
+//using Noobot.Toolbox.Middleware;
+//using Noobot.Toolbox.Plugins;
 
 namespace BeerOBot.ConsoleApp.Config
 {
@@ -16,7 +16,7 @@ namespace BeerOBot.ConsoleApp.Config
             this.UseMiddleware<SpotifyMiddleWare>();
             this.UseMiddleware<UnhandledMessageMiddleware>();
             this.UsePlugin<SpotifyPlugin>();
-            this.UsePlugin<JsonStoragePlugin>();
+            //this.UsePlugin<JsonStoragePlugin>();
             //UsePlugin<SchedulePlugin>();
             //this.UsePlugin<PingPlugin>();
         }
