@@ -13,6 +13,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Noobot.Core", "Slack\Noobot
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SlackConnector", "Slack\SlackConnector\src\SlackConnector\SlackConnector.csproj", "{BDD97F30-4CFB-498B-A651-B83685D6A6E1}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpotifyAPI.Web", "Spotify\SpotifyAPI-NET\SpotifyAPI.Web\SpotifyAPI.Web.csproj", "{2D767138-1352-45D5-BDE0-FFB42348B504}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpotifyAPI.Web.Auth", "Spotify\SpotifyAPI-NET\SpotifyAPI.Web.Auth\SpotifyAPI.Web.Auth.csproj", "{B169FF9E-6E3D-4F99-92EF-52CEDA5EAAE3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +35,14 @@ Global
 		{BDD97F30-4CFB-498B-A651-B83685D6A6E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDD97F30-4CFB-498B-A651-B83685D6A6E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDD97F30-4CFB-498B-A651-B83685D6A6E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D767138-1352-45D5-BDE0-FFB42348B504}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D767138-1352-45D5-BDE0-FFB42348B504}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D767138-1352-45D5-BDE0-FFB42348B504}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D767138-1352-45D5-BDE0-FFB42348B504}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B169FF9E-6E3D-4F99-92EF-52CEDA5EAAE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B169FF9E-6E3D-4F99-92EF-52CEDA5EAAE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B169FF9E-6E3D-4F99-92EF-52CEDA5EAAE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B169FF9E-6E3D-4F99-92EF-52CEDA5EAAE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -38,6 +50,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{1C40259F-7669-4B1A-8B6F-7827752F4B4A} = {CCD771BB-B286-42A6-909B-55683776DBEB}
 		{BDD97F30-4CFB-498B-A651-B83685D6A6E1} = {CCD771BB-B286-42A6-909B-55683776DBEB}
+		{2D767138-1352-45D5-BDE0-FFB42348B504} = {98063327-CF97-40D2-B2A9-972DF74B6DBD}
+		{B169FF9E-6E3D-4F99-92EF-52CEDA5EAAE3} = {98063327-CF97-40D2-B2A9-972DF74B6DBD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E590BEB3-D701-4A04-945B-7F61095C5509}
