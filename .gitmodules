@@ -1,3 +1,6 @@
 [submodule "Slack/Noobot"]
 	path = Slack/Noobot
 	url = https://github.com/noobot/noobot.git
+[submodule "Slack/SlackConnector"]
+	path = Slack/SlackConnector
+	url = https://github.com/noobot/SlackConnector.git
