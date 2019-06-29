@@ -1,17 +1,8 @@
 ﻿using System;
-using System.IO;
-using System.Threading;
-using System.Threading.Tasks;
-using BeerOBot.ConsoleApp.Config;
-using BeerOBot.ConsoleApp.Spotify;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Noobot.Core;
-using Noobot.Core.Configuration;
-using Noobot.Core.DependencyResolution;
+using BeerO.Bot.Config;
 using Topshelf;
 
-namespace BeerOBot.ConsoleApp
+namespace BeerO.Bot
 {
     internal class Program
     {

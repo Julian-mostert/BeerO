@@ -1,7 +1,7 @@
 ﻿using SpotifyAPI.Web;
 using SpotifyAPI.Web.Models;
 
-namespace BeerOBot.ConsoleApp.Spotify
+namespace BeerO.Bot.Spotify
 {
     public interface ISpotifyBase
     {

@@ -1,4 +1,4 @@
-﻿namespace BeerOBot.ConsoleApp.Entity
+﻿namespace BeerO.Bot.Entity
 {
     public class PlaylistEntity
     {

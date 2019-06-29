@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Text.RegularExpressions;
-using BeerOBot.ConsoleApp.SlackPlugin;
+using BeerO.Bot.SlackPlugin;
 using Noobot.Core.MessagingPipeline.Middleware;
 using Noobot.Core.MessagingPipeline.Middleware.ValidHandles;
 using Noobot.Core.MessagingPipeline.Request;
@@ -8,7 +8,7 @@ using Noobot.Core.MessagingPipeline.Response;
 using Quartz.Util;
 using SpotifyAPI.Web.Models;
 
-namespace BeerOBot.ConsoleApp.SlackMiddleWare
+namespace BeerO.Bot.SlackMiddleWare
 {
     public class SpotifyMiddleWare : MiddlewareBase
     {

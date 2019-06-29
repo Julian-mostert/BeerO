@@ -1,21 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.572
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29020.237
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BeerO.Bot", "BeerO.Bot\BeerO.Bot.csproj", "{80A7979F-A94D-4FA7-9F6A-A025B8DA2E39}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Slack", "Slack", "{CCD771BB-B286-42A6-909B-55683776DBEB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BeerO.SlackConnector", "BeerO.SlackConnector\BeerO.SlackConnector.csproj", "{0723AFCB-C072-441E-BA36-84314A139500}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeerO.SlackBotCore", "BeerO.SlackBotCore\BeerO.SlackBotCore.csproj", "{D3A06601-5357-4FF3-9947-774DC4AF5055}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Spotify", "Spotify", "{98063327-CF97-40D2-B2A9-972DF74B6DBD}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeerO.SpotifyApi", "BeerO.SpotifyApi\BeerO.SpotifyApi.csproj", "{CFA1394F-E492-43D2-B1BC-C5F18DEA35D2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeerO.SpotifyAuth", "BeerO.SpotifyAuth\BeerO.SpotifyAuth.csproj", "{15B5ECC7-9349-4E94-8A71-5E69405AA6BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,31 +19,9 @@ Global
 		{80A7979F-A94D-4FA7-9F6A-A025B8DA2E39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80A7979F-A94D-4FA7-9F6A-A025B8DA2E39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80A7979F-A94D-4FA7-9F6A-A025B8DA2E39}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0723AFCB-C072-441E-BA36-84314A139500}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0723AFCB-C072-441E-BA36-84314A139500}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0723AFCB-C072-441E-BA36-84314A139500}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0723AFCB-C072-441E-BA36-84314A139500}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D3A06601-5357-4FF3-9947-774DC4AF5055}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D3A06601-5357-4FF3-9947-774DC4AF5055}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D3A06601-5357-4FF3-9947-774DC4AF5055}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D3A06601-5357-4FF3-9947-774DC4AF5055}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CFA1394F-E492-43D2-B1BC-C5F18DEA35D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CFA1394F-E492-43D2-B1BC-C5F18DEA35D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CFA1394F-E492-43D2-B1BC-C5F18DEA35D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CFA1394F-E492-43D2-B1BC-C5F18DEA35D2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{15B5ECC7-9349-4E94-8A71-5E69405AA6BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{15B5ECC7-9349-4E94-8A71-5E69405AA6BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{15B5ECC7-9349-4E94-8A71-5E69405AA6BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{15B5ECC7-9349-4E94-8A71-5E69405AA6BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{0723AFCB-C072-441E-BA36-84314A139500} = {CCD771BB-B286-42A6-909B-55683776DBEB}
-		{D3A06601-5357-4FF3-9947-774DC4AF5055} = {CCD771BB-B286-42A6-909B-55683776DBEB}
-		{CFA1394F-E492-43D2-B1BC-C5F18DEA35D2} = {98063327-CF97-40D2-B2A9-972DF74B6DBD}
-		{15B5ECC7-9349-4E94-8A71-5E69405AA6BA} = {98063327-CF97-40D2-B2A9-972DF74B6DBD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E590BEB3-D701-4A04-945B-7F61095C5509}

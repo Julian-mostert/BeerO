@@ -6,7 +6,7 @@ using Noobot.Core.MessagingPipeline.Request;
 using Noobot.Core.MessagingPipeline.Response;
 using Noobot.Core.Plugins.StandardPlugins;
 
-namespace BeerOBot.ConsoleApp.SlackMiddleWare
+namespace BeerO.Bot.SlackMiddleWare
 {
     public class SlackTest : MiddlewareBase
     {
@@ -76,7 +76,7 @@ namespace BeerOBot.ConsoleApp.SlackMiddleWare
                 }
             };
 
-            yield return message.ReplyToChannel(replyMessage, (Attachment) null);
+            yield return message.ReplyToChannel(replyMessage, test);
         }
     }
 }

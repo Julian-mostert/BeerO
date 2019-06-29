@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Threading;
-using BeerOBot.ConsoleApp.Config;
-using BeerOBot.ConsoleApp.Spotify;
+using BeerO.Bot.Config;
+using BeerO.Bot.Spotify;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Noobot.Core;
 using Noobot.Core.Configuration;
 using Noobot.Core.DependencyResolution;
 
-
-namespace BeerOBot.ConsoleApp
+namespace BeerO.Bot
 {
     public class BotHost
     {

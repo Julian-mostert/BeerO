@@ -1,4 +1,4 @@
-﻿namespace BeerOBot.ConsoleApp.Config
+﻿namespace BeerO.Bot.Config
 {
     public static class SpotifyReturnMessages
     {

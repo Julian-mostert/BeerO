@@ -1,12 +1,11 @@
 ﻿using System.IO;
-using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using SpotifyAPI.Web;
 using SpotifyAPI.Web.Auth;
 using SpotifyAPI.Web.Enums;
 using SpotifyAPI.Web.Models;
 
-namespace BeerOBot.ConsoleApp.Spotify
+namespace BeerO.Bot.Spotify
 {
     public class SpotifyBase : ISpotifyBase
     {

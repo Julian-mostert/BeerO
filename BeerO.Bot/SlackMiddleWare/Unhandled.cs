@@ -3,7 +3,7 @@ using Noobot.Core.MessagingPipeline.Middleware;
 using Noobot.Core.MessagingPipeline.Request;
 using Noobot.Core.MessagingPipeline.Response;
 
-namespace BeerOBot.ConsoleApp.SlackMiddleWare
+namespace BeerO.Bot.SlackMiddleWare
 {
     internal class UnhandledMessageMiddleware : IMiddleware
     {

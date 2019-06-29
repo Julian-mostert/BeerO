@@ -1,11 +1,10 @@
 ﻿using System;
-using BeerOBot.ConsoleApp.Config;
-using BeerOBot.ConsoleApp.Spotify;
+using BeerO.Bot.Spotify;
 using Noobot.Core.Plugins;
 using Quartz.Util;
 using SpotifyAPI.Web.Models;
 
-namespace BeerOBot.ConsoleApp.SlackPlugin
+namespace BeerO.Bot.SlackPlugin
 {
     public class SpotifyPlugin : IPlugin
     {

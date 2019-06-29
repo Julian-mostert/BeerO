@@ -1,8 +1,8 @@
 ﻿using System;
-using BeerOBot.ConsoleApp.SlackMiddleWare;
+using BeerO.Bot.SlackMiddleWare;
 using Noobot.Core.Configuration;
 
-namespace BeerOBot.ConsoleApp.Config
+namespace BeerO.Bot.Config
 {
     public class Config : ConfigurationBase
     {

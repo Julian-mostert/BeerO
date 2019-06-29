@@ -1,10 +1,11 @@
-﻿using BeerOBot.ConsoleApp.SlackMiddleWare;
-using BeerOBot.ConsoleApp.SlackPlugin;
+﻿using BeerO.Bot.SlackMiddleWare;
+using BeerO.Bot.SlackPlugin;
 using Noobot.Core.Configuration;
+
 //using Noobot.Toolbox.Middleware;
 //using Noobot.Toolbox.Plugins;
 
-namespace BeerOBot.ConsoleApp.Config
+namespace BeerO.Bot.Config
 {
     public class BotPipelineConfiguration : ConfigurationBase
     {
