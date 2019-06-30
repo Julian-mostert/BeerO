@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpotifyAPI.Web", "Spotify\S
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpotifyAPI.Web.Auth", "Spotify\SpotifyAPI-NET\SpotifyAPI.Web.Auth\SpotifyAPI.Web.Auth.csproj", "{B169FF9E-6E3D-4F99-92EF-52CEDA5EAAE3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeerO.SlackCore", "BeerO.SlackCore\BeerO.SlackCore.csproj", "{156A01C1-A056-456E-9F53-DAB0C45339FB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{B169FF9E-6E3D-4F99-92EF-52CEDA5EAAE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B169FF9E-6E3D-4F99-92EF-52CEDA5EAAE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B169FF9E-6E3D-4F99-92EF-52CEDA5EAAE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{156A01C1-A056-456E-9F53-DAB0C45339FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{156A01C1-A056-456E-9F53-DAB0C45339FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{156A01C1-A056-456E-9F53-DAB0C45339FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{156A01C1-A056-456E-9F53-DAB0C45339FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

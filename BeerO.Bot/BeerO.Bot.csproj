@@ -11,12 +11,13 @@
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="2.2.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
     <PackageReference Include="Quartz" Version="3.0.7" />
-    <PackageReference Include="SpotifyAPI.Web.Auth" Version="4.1.0" />
     <PackageReference Include="Topshelf" Version="4.2.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Slack\Noobot\src\Noobot.Core\Noobot.Core.csproj" />
+    <ProjectReference Include="..\Spotify\SpotifyAPI-NET\SpotifyAPI.Web.Auth\SpotifyAPI.Web.Auth.csproj" />
+    <ProjectReference Include="..\Spotify\SpotifyAPI-NET\SpotifyAPI.Web\SpotifyAPI.Web.csproj" />
   </ItemGroup>
 
 </Project>
