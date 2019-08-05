@@ -20,8 +20,8 @@ namespace BeerO.SlackCore.DependencyResolution
 
         private readonly Type[] _singletons =
         {
-            typeof(INoobotCore),
-            typeof(NoobotCore),
+            typeof(ISlackBotCore),
+            typeof(SlackBotCore),
             typeof(IConfigReader)
         };
 
@@ -40,7 +40,7 @@ namespace BeerO.SlackCore.DependencyResolution
             this.SetupMiddlewarePipeline(registry);
             Type[] pluginTypes = this.SetupPlugins(registry);
 
-            registry.For<INoobotCore>().Use(x => x.GetInstance<NoobotCore>());
+            registry.For<ISlackBotCore>().Use(x => x.GetInstance<SlackBotCore>());
             registry.For<ILogger>().Use(this._logger);
             registry.For<IConfigReader>().Use(this._configReader);
 
@@ -64,7 +64,7 @@ namespace BeerO.SlackCore.DependencyResolution
 
         private static INoobotContainer CreateContainer(Type[] pluginTypes, ServiceRegistry registry)
         {
-            var container = new NoobotContainer(pluginTypes);
+            var container = new SlackBotContainer(pluginTypes);
             registry.For<INoobotContainer>().Use(x => container);
             container.Initialise(registry);
             return container;
@@ -75,7 +75,7 @@ namespace BeerO.SlackCore.DependencyResolution
             foreach (Type type in this._singletons)
             {
                 //registry.
-                registry.For(type);
+                registry.For(type).DecorateAllWith(type);
             }
         }
 
@@ -109,13 +109,15 @@ namespace BeerO.SlackCore.DependencyResolution
             while (pipeline.Any())
             {
                 Type nextType = pipeline.Pop();
-                var nextDeclare = registry.For<IMiddleware>();
+                ServiceRegistry.InstanceExpression<IMiddleware> nextDeclare = registry.For<IMiddleware>();
 
                 // using reflection as Structuremap doesn't allow passing types in at the moment :-(
-                MethodInfo decorateMethod = nextDeclare.GetType()
-                    .GetMethod("DecorateAllWith", new[] {typeof(Func<Instance, bool>)});
-                MethodInfo generic = decorateMethod.MakeGenericMethod(nextType);
-                generic.Invoke(nextDeclare, new object[] {null});
+                MethodInfo decorateMethod = nextDeclare.GetType().GetMethod("DecorateAllWith", new[] {typeof(Func<Instance, bool>)});
+                if (decorateMethod != null)
+                {
+                    MethodInfo generic = decorateMethod.MakeGenericMethod(nextType);
+                    generic.Invoke(nextDeclare, new object[] {null});
+                }
             }
 
             if (this._configReader.HelpEnabled)

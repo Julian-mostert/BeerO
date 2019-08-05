@@ -14,7 +14,7 @@ namespace BeerO.Bot
     {
         private                 IConfigReader    _configReader;
         private                 IConfiguration   _configuration;
-        private                 INoobotCore      _noobotCore;
+        private                 ISlackBotCore      _slackBotCore;
         private static readonly ManualResetEvent _quitEvent = new ManualResetEvent(false);
 
         public BotHost(IConfigReader configReader)
@@ -36,10 +36,10 @@ namespace BeerO.Bot
                 new ContainerFactory(this._configuration, this._configReader, test);
 
             INoobotContainer container = containerFactory.CreateContainer();
-            this._noobotCore = container.GetNoobotCore();
+            this._slackBotCore = container.GetNoobotCore();
 
 
-            this._noobotCore
+            this._slackBotCore
                 .Connect()
                 .ContinueWith(task =>
                 {
@@ -60,7 +60,7 @@ namespace BeerO.Bot
         public void Stop()
         {
             Console.WriteLine("Disconnecting...");
-            this._noobotCore?.Disconnect();
+            this._slackBotCore?.Disconnect();
         }
 
         private ILogger GetLogger(IServiceCollection serviceBuilder)
@@ -81,7 +81,7 @@ namespace BeerO.Bot
         private void ProcessExitHandler(object sender, EventArgs e)
         {
             Console.WriteLine("Disconnecting...");
-            this._noobotCore?.Disconnect();
+            this._slackBotCore?.Disconnect();
         }
     }
 }

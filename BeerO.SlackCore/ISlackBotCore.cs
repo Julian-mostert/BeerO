@@ -5,7 +5,7 @@ using BeerO.SlackCore.MessagingPipeline.Response;
 
 namespace BeerO.SlackCore
 {
-    public interface INoobotCore
+    public interface ISlackBotCore
     {
         Task Connect();
         void Disconnect();

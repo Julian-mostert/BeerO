@@ -6,7 +6,7 @@ namespace BeerO.SlackCore.DependencyResolution
 {
     public interface INoobotContainer
     {
-        INoobotCore GetNoobotCore();
+        ISlackBotCore GetNoobotCore();
         IPlugin[] GetPlugins();
         T GetPlugin<T>() where T : class, IPlugin;
         IMiddleware GetMiddlewarePipeline();

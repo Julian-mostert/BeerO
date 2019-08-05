@@ -7,12 +7,12 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace BeerO.SlackCore.DependencyResolution
 {
-    internal class NoobotContainer : INoobotContainer
+    internal class SlackBotContainer : INoobotContainer
     {
         private Container _container;
         private readonly Type[] _pluginTypes;
 
-        public NoobotContainer(Type[] pluginTypes)
+        public SlackBotContainer(Type[] pluginTypes)
         {
             this._pluginTypes = pluginTypes;
         }
@@ -22,9 +22,9 @@ namespace BeerO.SlackCore.DependencyResolution
             this._container = new Container(registry);
         }
 
-        public INoobotCore GetNoobotCore()
+        public ISlackBotCore GetNoobotCore()
         {
-            return this._container.GetInstance<INoobotCore>();
+            return this._container.GetInstance<ISlackBotCore>();
         }
                 
         private IPlugin[] _plugins;

@@ -9,11 +9,11 @@ namespace BeerO.SlackCore.MessagingPipeline.Middleware.StandardMiddleware
 {
     internal class HelpMiddleware : MiddlewareBase
     {
-        private readonly INoobotCore _noobotCore;
+        private readonly ISlackBotCore _slackBotCore;
 
-        public HelpMiddleware(IMiddleware next, INoobotCore noobotCore) : base(next)
+        public HelpMiddleware(IMiddleware next, ISlackBotCore slackBotCore) : base(next)
         {
-            this._noobotCore = noobotCore;
+            this._slackBotCore = slackBotCore;
 
             this.HandlerMappings = new[]
             {
@@ -38,7 +38,7 @@ namespace BeerO.SlackCore.MessagingPipeline.Middleware.StandardMiddleware
 
             foreach (CommandDescription commandDescription in supportedCommands)
             {
-                string description = commandDescription.Description.Replace("@{bot}", $"@{this._noobotCore.GetBotUserName()}");
+                string description = commandDescription.Description.Replace("@{bot}", $"@{this._slackBotCore.GetBotUserName()}");
                 builder.AppendFormat("{0}\t- {1}\n", commandDescription.Command, description);
             }
 

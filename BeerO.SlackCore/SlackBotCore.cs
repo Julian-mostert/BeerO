@@ -19,7 +19,7 @@ using Microsoft.Extensions.Logging;
 
 namespace BeerO.SlackCore
 {
-    internal class NoobotCore : INoobotCore
+    internal class SlackBotCore : ISlackBotCore
     {
         private readonly IConfigReader _configReader;
         private readonly ILogger _logger;
@@ -27,7 +27,7 @@ namespace BeerO.SlackCore
         private readonly AverageStat _averageResponse;
         private ISlackConnection _connection;
 
-        public NoobotCore(IConfigReader configReader, ILogger logger, INoobotContainer container)
+        public SlackBotCore(IConfigReader configReader, ILogger logger, INoobotContainer container)
         {
             this._configReader = configReader;
             this._logger = logger;
