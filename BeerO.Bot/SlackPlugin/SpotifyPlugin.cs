@@ -50,7 +50,7 @@ namespace BeerO.Bot.SlackPlugin
 
         private static string GetPlaylistName()
         {
-            return$"EntelectHQ-{DateTime.Now.ToShortDateString()}";
+            return $"EntelectHQ-{DateTime.Now.ToShortDateString()}";
         }
 
 
@@ -70,11 +70,11 @@ namespace BeerO.Bot.SlackPlugin
             {
                 this.CheckOrRefreshToken();
                 FullPlaylist createdPlaylist = this._spotifyBase.SpotifyWebApi.CreatePlaylist(
-                                                                                              this.spotifyPrivateProfile
-                                                                                                  .Id,
-                                                                                              playlistName,
-                                                                                              true
-                                                                                             );
+                    this.spotifyPrivateProfile
+                        .Id,
+                    playlistName,
+                    true
+                );
                 this.spotifyPlayList = createdPlaylist;
             }
         }
@@ -90,14 +90,11 @@ namespace BeerO.Bot.SlackPlugin
                 {
                     if (playlist.Name == playlistName)
                     {
-                        FullPlaylist getPlaylist = this._spotifyBase.SpotifyWebApi.GetPlaylist(
-                                                                                               this
-                                                                                                   .spotifyPrivateProfile
-                                                                                                   .Id,
-                                                                                               playlist.Id,
-                                                                                               "",
-                                                                                               ""
-                                                                                              );
+                        FullPlaylist getPlaylist =
+                            this._spotifyBase.SpotifyWebApi.GetPlaylist(
+                                playlist.Id, 
+                                "",
+                                "");
                         this.spotifyPlayList = getPlaylist;
                     }
                 }
@@ -118,11 +115,10 @@ namespace BeerO.Bot.SlackPlugin
             this.CreateNewPlaylist();
             this.CheckOrRefreshToken();
             ErrorResponse test = this._spotifyBase.SpotifyWebApi.AddPlaylistTrack(
-                                                                                  this.spotifyPlayList.Id,
-                                                                                  this.spotifyPlayList.Id,
-                                                                                  trackUrl
-                                                                                 );
-            return!test.HasError();
+                this.spotifyPlayList.Id,
+                trackUrl
+            );
+            return !test.HasError();
         }
 
         public AvailabeDevices GetSpotifyDevices()
