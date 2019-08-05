@@ -1,6 +1,6 @@
 ﻿using BeerO.Bot.SlackMiddleWare;
 using BeerO.Bot.SlackPlugin;
-using Noobot.Core.Configuration;
+using BeerO.SlackCore.Configuration;
 
 //using Noobot.Toolbox.Middleware;
 //using Noobot.Toolbox.Plugins;

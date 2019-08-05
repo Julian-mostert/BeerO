@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Noobot.Core.MessagingPipeline.Middleware;
-using Noobot.Core.MessagingPipeline.Request;
-using Noobot.Core.MessagingPipeline.Response;
+using BeerO.SlackCore.MessagingPipeline.Middleware;
+using BeerO.SlackCore.MessagingPipeline.Request;
+using BeerO.SlackCore.MessagingPipeline.Response;
 
 namespace BeerO.Bot.SlackMiddleWare
 {

@@ -15,7 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Slack\Noobot\src\Noobot.Core\Noobot.Core.csproj" />
+    <ProjectReference Include="..\BeerO.SlackConnector\BeerO.SlackConnector.csproj" />
+    <ProjectReference Include="..\BeerO.SlackCore\BeerO.SlackCore.csproj" />
     <ProjectReference Include="..\Spotify\SpotifyAPI-NET\SpotifyAPI.Web.Auth\SpotifyAPI.Web.Auth.csproj" />
     <ProjectReference Include="..\Spotify\SpotifyAPI-NET\SpotifyAPI.Web\SpotifyAPI.Web.csproj" />
   </ItemGroup>

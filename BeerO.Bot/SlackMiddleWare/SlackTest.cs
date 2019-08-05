@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using Noobot.Core.MessagingPipeline.Middleware;
-using Noobot.Core.MessagingPipeline.Middleware.ValidHandles;
-using Noobot.Core.MessagingPipeline.Request;
-using Noobot.Core.MessagingPipeline.Response;
-using Noobot.Core.Plugins.StandardPlugins;
+using BeerO.SlackCore.MessagingPipeline.Middleware;
+using BeerO.SlackCore.MessagingPipeline.Middleware.ValidHandles;
+using BeerO.SlackCore.MessagingPipeline.Request;
+using BeerO.SlackCore.MessagingPipeline.Response;
+using BeerO.SlackCore.Plugins.StandardPlugins;
 
 namespace BeerO.Bot.SlackMiddleWare
 {

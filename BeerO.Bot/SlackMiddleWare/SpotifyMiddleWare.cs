@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using BeerO.Bot.SlackPlugin;
-using Noobot.Core.MessagingPipeline.Middleware;
-using Noobot.Core.MessagingPipeline.Middleware.ValidHandles;
-using Noobot.Core.MessagingPipeline.Request;
-using Noobot.Core.MessagingPipeline.Response;
+using BeerO.SlackCore.MessagingPipeline.Middleware;
+using BeerO.SlackCore.MessagingPipeline.Middleware.ValidHandles;
+using BeerO.SlackCore.MessagingPipeline.Request;
+using BeerO.SlackCore.MessagingPipeline.Response;
 using Quartz.Util;
 using SpotifyAPI.Web.Models;
 

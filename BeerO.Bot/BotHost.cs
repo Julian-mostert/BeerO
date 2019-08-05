@@ -2,11 +2,11 @@
 using System.Threading;
 using BeerO.Bot.Config;
 using BeerO.Bot.Spotify;
+using BeerO.SlackCore;
+using BeerO.SlackCore.Configuration;
+using BeerO.SlackCore.DependencyResolution;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Noobot.Core;
-using Noobot.Core.Configuration;
-using Noobot.Core.DependencyResolution;
 
 namespace BeerO.Bot
 {

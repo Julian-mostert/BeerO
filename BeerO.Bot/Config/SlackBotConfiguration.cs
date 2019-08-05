@@ -1,6 +1,7 @@
 ﻿using System;
 using BeerO.Bot.SlackMiddleWare;
-using Noobot.Core.Configuration;
+using BeerO.SlackCore.Configuration;
+
 
 namespace BeerO.Bot.Config
 {

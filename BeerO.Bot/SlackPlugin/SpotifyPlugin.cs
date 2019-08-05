@@ -1,6 +1,6 @@
 ﻿using System;
 using BeerO.Bot.Spotify;
-using Noobot.Core.Plugins;
+using BeerO.SlackCore.Plugins;
 using Quartz.Util;
 using SpotifyAPI.Web.Models;
 
