@@ -1,9 +1,6 @@
 [submodule "Slack/Noobot"]
 	path = Slack/Noobot
 	url = https://github.com/Julian-mostert/noobot.git
-[submodule "Slack/SlackConnector"]
-	path = Slack/SlackConnector
-	url = https://github.com/Julian-mostert/SlackConnector.git
 [submodule "Spotify/SpotifyAPI-NET"]
 	path = Spotify/SpotifyAPI-NET
 	url = https://github.com/Julian-mostert/SpotifyAPI-NET.git
